@@ -2,7 +2,7 @@ use std::net::{TcpListener, TcpStream};
 use std::io::Read;
 
 fn handle_client(stream: TcpStream) {
-    println!("Handling stream... {}", stream.peer_addr().unwrap());
+    println!("Handling stream from: {}", stream.peer_addr().unwrap());
 
     let mut stream = stream.try_clone().unwrap();
     let mut buf = String::new();
