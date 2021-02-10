@@ -9,6 +9,6 @@ fn main() {
     match args.get(1).unwrap_or(&String::new()).as_ref() {
         "verifier" => verifier::run().unwrap(),
         "prover" => prover::run().unwrap(),
-        _ => println!("Usage: client | server [ip:port]")
+        _ => println!("Usage: verifier | prover")
     }
 }
